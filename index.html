@@ -3,40 +3,115 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Best Rummy App</title>
+  <title>Rummy Landing Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #1e1e2f, #2c2c54);
+      color: #fff;
+      text-align: center;
+      overflow-x: hidden;
+    }
 
+    header {
+      padding: 20px;
+      font-size: 2rem;
+      font-weight: 600;
+      animation: fadeDown 1.5s ease-in-out;
+    }
+
+    .games {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 40px 20px;
+      gap: 20px;
+    }
+
+    .game-card {
+      background: #2a2a40;
+      border-radius: 15px;
+      padding: 20px;
+      width: 250px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      animation: fadeUp 1.2s ease-in-out;
+    }
+
+    .game-card:hover {
+      transform: translateY(-10px) scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    }
+
+    .game-card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .game-card a {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #ff4d6d;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+    }
+
+    .game-card a:hover {
+      background: #ff1e4d;
+    }
+
+    footer {
+      margin: 30px 0;
+      font-size: 0.9rem;
+      opacity: 0.7;
+    }
+
+    /* Animations */
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+
+  <!-- Tracking Scripts -->
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-WBSPN9BQJN"></script>
   <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
+      function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-WBSPN9BQJN');
   </script>
 
   <!-- Meta Pixel Code -->
   <script>
-      !function(f, b, e, v, n, t, s) {
-          if (f.fbq) return;
-          n = f.fbq = function() {
-              n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-          };
-          if (!f._fbq) f._fbq = n;
-          n.push = n;
-          n.loaded = !0;
-          n.version = '2.0';
-          n.queue = [];
-          t = b.createElement(e);
-          t.async = !0;
-          t.src = v;
-          s = b.getElementsByTagName(e)[0];
-          s.parentNode.insertBefore(t, s)
-      }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+      !function(f,b,e,v,n,t,s){
+          if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+          n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+          if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+          n.queue=[];t=b.createElement(e);t.async=!0;
+          t.src=v;s=b.getElementsByTagName(e)[0];
+          s.parentNode.insertBefore(t,s)
+      }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
       fbq('init', '1055491136757260');
       fbq('track', 'PageView');
   </script>
   <noscript>
-      <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1055491136757260&ev=PageView&noscript=1"/>
+      <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1055491136757260&ev=PageView&noscript=1"/>
   </noscript>
 
   <!-- Google Tag Manager -->
@@ -46,218 +121,33 @@
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-T63S7RZR');</script>
   <!-- End Google Tag Manager -->
-
-  <!-- Meta Pixel Code -->
-  <script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '778486944679146');
-  fbq('track', 'PageView');
-  </script>
-  <noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=778486944679146&ev=PageView&noscript=1"
-  /></noscript>
-  <!-- End Meta Pixel Code -->
-
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: Arial, sans-serif; background: #fff; color: #333; }
-
-    /* Animations */
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes bounce {
-      0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-      40% { transform: translateY(-8px); }
-      60% { transform: translateY(-4px); }
-    }
-    @keyframes glow {
-      0% { box-shadow: 0 0 5px red; }
-      50% { box-shadow: 0 0 20px gold; }
-      100% { box-shadow: 0 0 5px red; }
-    }
-
-    /* Header */
-    header {
-      background: #000; color: #fff;
-      display: flex; justify-content: space-between; align-items: center;
-      padding: 12px 20px; position: sticky; top: 0; z-index: 1000;
-      animation: fadeIn 1s ease-in-out;
-    }
-    header .logo { font-size: 20px; font-weight: bold; }
-    header nav a { color: #fff; margin-left: 15px; text-decoration: none; font-size: 14px; }
-    header nav a:hover { text-decoration: underline; }
-
-    /* Banner */
-    .banner {
-      background: linear-gradient(135deg, #3a2a78, #20114d);
-      color: #fff; padding: 30px 15px; text-align: center;
-      animation: fadeIn 1.2s ease-in-out;
-    }
-    .banner h1 { font-size: 24px; margin-bottom: 10px; }
-    .banner p { font-size: 14px; opacity: 0.9; }
-
-    /* Featured Apps */
-    .apps {
-      display: flex; justify-content: center; gap: 20px; padding: 20px; flex-wrap: wrap;
-      animation: fadeIn 1.4s ease-in-out;
-    }
-    .app-card {
-      flex: 1 1 140px; max-width: 160px; text-align: center;
-      background: #fff; padding: 15px; border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2); transition: transform 0.3s, box-shadow 0.3s;
-    }
-    .app-card:hover {
-      transform: translateY(-8px) scale(1.05);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-    }
-    .app-card img { width: 80px; height: 80px; border-radius: 15px; }
-    .app-card h3 { font-size: 14px; margin: 8px 0; }
-    .app-card p { font-size: 12px; color: #666; }
-
-    .download-btn {
-      display: inline-block; margin-top: 10px; padding: 8px 15px;
-      background: linear-gradient(90deg, red, darkred);
-      color: #fff; border-radius: 5px; text-decoration: none; font-weight: bold; font-size: 14px;
-      animation: bounce 2s infinite;
-    }
-
-    /* Tabs */
-    .tabs {
-      display: flex; justify-content: center; background: #000; color: #fff;
-      padding: 12px; font-size: 14px; flex-wrap: wrap;
-      animation: fadeIn 1.6s ease-in-out;
-    }
-    .tabs div { margin: 5px 15px; cursor: pointer; transition: 0.3s; }
-    .tabs div.active { font-weight: bold; border-bottom: 2px solid #fff; }
-
-    /* App List */
-    .list { padding: 10px 20px; animation: fadeIn 1.8s ease-in-out; }
-    .list-item {
-      display: flex; justify-content: space-between; align-items: center;
-      padding: 15px 0; border-bottom: 1px solid #ddd; flex-wrap: wrap;
-      transition: background 0.3s;
-    }
-    .list-item:hover { background: #f9f9f9; }
-    .list-item img { width: 55px; height: 55px; border-radius: 12px; margin-right: 10px; }
-    .list-item .info { flex: 1; min-width: 200px; }
-    .list-item .info strong { font-size: 15px; display: block; margin-bottom: 3px; }
-    .list-item .info small { font-size: 13px; color: #555; }
-
-    /* Bonus Banner */
-    .bonus-banner {
-      background: linear-gradient(90deg, gold, orange);
-      color: #000; padding: 15px; text-align: center;
-      font-weight: bold; font-size: 16px; position: sticky; bottom: 0;
-      animation: glow 2s infinite;
-    }
-
-    /* Mobile */
-    @media (max-width: 768px) {
-      header nav { display: none; }
-      .apps { gap: 10px; }
-      .app-card { flex: 1 1 45%; }
-      .list-item { flex-direction: column; align-items: flex-start; }
-      .list-item .download-btn { margin-top: 10px; }
-    }
-  </style>
 </head>
 <body>
 
-  <!-- Header -->
-  <header>
-    <div class="logo">BestRummy.App</div>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Ads</a>
-      <a href="#">Contact</a>
-    </nav>
-  </header>
+  <header>Welcome to Rummy World</header>
 
-  <!-- Banner -->
-  <div class="banner">
-    <h1>India No. 1 Rummy Platform</h1>
-    <p>Safe, Secure & Rewarding Play</p>
-  </div>
-
-  <!-- Featured Apps -->
-  <div class="apps">
-    <div class="app-card">
+  <section class="games">
+    <div class="game-card">
       <img src="rummymost.png" alt="Rummy Most">
-      <h3>Rummy Most</h3>
-      <p>100% Safe & Secure</p>
-      <a href="https://rummygrand.cc/?from_gameid=12731760&amp;channelCode=100000" class="download-btn">Download</a>
+      <a href="https://rummygrand.cc/?from_gameid=12731760&channelCode=100000" target="_blank">Play Rummy Most</a>
     </div>
-    <div class="app-card">
+    <div class="game-card">
       <img src="rummygrand.png" alt="Rummy Grand">
-      <h3>Rummy Grand</h3>
-      <p>200% Safe & Secure</p>
-      <a href="https://rummygrand.cc/?from_gameid=9118107&amp;channelCode=9099722" class="download-btn">Download</a>
+      <a href="https://rummygrand.cc/?from_gameid=9118107&channelCode=9099722" target="_blank">Play Rummy Grand</a>
     </div>
-    <div class="app-card">
+    <div class="game-card">
       <img src="rummyloot.png" alt="Rummy Loot">
-      <h3>Rummy Loot</h3>
-      <p>100% Safe & Secure</p>
-      <a href="https://rummyloot.com/?from_gameid=10190031&channelCode=100000" class="download-btn">Download</a>
+      <a href="https://rummyloot.com/?from_gameid=10190031&channelCode=100000" target="_blank">Play Rummy Loot</a>
     </div>
-  </div>
-
-  <!-- Tabs -->
-  <div class="tabs">
-    <div class="active">Top Trending</div>
-    <div>New Apps</div>
-    <div>Another Apps</div>
-  </div>
-
-  <!-- List -->
-  <div class="list">
-    <div class="list-item">
-      <img src="rummygrand.png" alt="Rummy Grand">
-      <div class="info">
-        <strong>Rummy Grand</strong>
-        <small>Sign Up Bonus ₹30/- | Min. Withdrawal ₹100/-</small>
-      </div>
-      <a href="https://rummygrand.cc/?from_gameid=9118107&amp;channelCode=9099722" class="download-btn">Download</a>
-    </div>
-    <div class="list-item">
-      <img src="rummymost.png" alt="Rummy Most">
-      <div class="info">
-        <strong>Rummy Most</strong>
-        <small>Sign Up Bonus ₹30/- | Min. Withdrawal ₹100/-</small>
-      </div>
-      <a href="https://rummygrand.cc/?from_gameid=12731760&amp;channelCode=100000" class="download-btn">Download</a>
-    </div>
-    <div class="list-item">
-      <img src="rummyloot.png" alt="Rummy Loot">
-      <div class="info">
-        <strong>Rummy Loot</strong>
-        <small>Sign Up Bonus ₹30/- | Min. Withdrawal ₹100/-</small>
-      </div>
-      <a href="https://rummyloot.com/?from_gameid=10190031&channelCode=100000" class="download-btn">Download</a>
-    </div>
-    <div class="list-item">
+    <div class="game-card">
       <img src="rummysweety.png" alt="Rummy Sweety">
-      <div class="info">
-        <strong>Rummy Sweety</strong>
-        <small>Sign Up Bonus ₹25/- | Min. Withdrawal ₹100/-</small>
-      </div>
-      <a href="https://rummyloot.in/?from_gameid=4160821&amp;channelCode=878378" class="download-btn">Download</a>
+      <a href="https://rummyloot.in/?from_gameid=4160821&channelCode=878378" target="_blank">Play Rummy Sweety</a>
     </div>
-  </div>
+  </section>
 
-  <!-- Bonus Banner -->
-  <div class="bonus-banner">
-    DOWNLOAD TO GET BONUS ₹30
-  </div>
+  <footer>
+    © 2025 Rummy World. All Rights Reserved.
+  </footer>
 
 </body>
 </html>
