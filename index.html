@@ -53,18 +53,20 @@
       margin-bottom: 15px;
     }
 
-    .game-card a {
+    .play-btn {
       display: inline-block;
       padding: 10px 20px;
       background: #ff4d6d;
       color: #fff;
-      text-decoration: none;
       font-weight: 600;
       border-radius: 8px;
+      border: none;
+      cursor: pointer;
       transition: background 0.3s ease;
+      font-family: 'Poppins', sans-serif;
     }
 
-    .game-card a:hover {
+    .play-btn:hover {
       background: #ff1e4d;
     }
 
@@ -86,75 +88,92 @@
     }
   </style>
 
-  <!-- Tracking Scripts -->
- <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5J011S3GJG"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5J011S3GJG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-5J011S3GJG');
+  </script>
 
-  gtag('config', 'G-5J011S3GJG');
-</script>
+  <!-- Meta Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '4173609939545731');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=4173609939545731&ev=PageView&noscript=1"/>
+  </noscript>
 
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '4173609939545731');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=4173609939545731&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-W7RL6VRL');</script>
 
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-W7RL6VRL');</script>
-<!-- End Google Tag Manager -->
+</head>
 <body>
 
-  <!-- Google Tag Manager (noscript) -->
+  <!-- GTM (noscript) -->
   <noscript>
     <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W7RL6VRL"
     height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </noscript>
-  <!-- End Google Tag Manager (noscript) -->
 
   <header>Welcome to Rummy World</header>
 
   <section class="games">
     <div class="game-card">
       <img src="rummymost.png" alt="Rummy Most">
-      <a href="https://rummygrand.cc?from_gameid=12746176&channelCode=100000" target="_blank">Play Rummy Most</a>
+      <button id="playRummyMost" class="play-btn">Play Rummy Most</button>
     </div>
     <div class="game-card">
       <img src="rummygrand.png" alt="Rummy Grand">
-      <a href="https://rummygrand.cc/?from_gameid=9118107&channelCode=9099722" target="_blank">Play Rummy Grand</a>
+      <button id="playRummyGrand" class="play-btn">Play Rummy Grand</button>
     </div>
     <div class="game-card">
       <img src="rummyloot.png" alt="Rummy Loot">
-      <a href="https://rummyloot.com/?from_gameid=10190031&channelCode=100000" target="_blank">Play Rummy Loot</a>
+      <button id="playRummyLoot" class="play-btn">Play Rummy Loot</button>
     </div>
     <div class="game-card">
       <img src="rummysweety.png" alt="Rummy Paisa">
-      <a href="https://rummyloot.in/?from_gameid=4160821&amp;channelCode=878378" target="_blank">Play Rummy Paisa</a>
+      <button id="playRummyPaisa" class="play-btn">Play Rummy Paisa</button>
     </div>
   </section>
 
   <footer>
     © 2025 Rummy World. All Rights Reserved.
   </footer>
+
+  <script>
+    // Map buttons to their URLs
+    const links = {
+      playRummyMost: "https://rummygrand.cc?from_gameid=12746176&channelCode=100000",
+      playRummyGrand: "https://rummygrand.cc/?from_gameid=9118107&channelCode=9099722",
+      playRummyLoot: "https://rummyloot.com/?from_gameid=10190031&channelCode=100000",
+      playRummyPaisa: "https://rummyloot.in/?from_gameid=4160821&channelCode=878378"
+    };
+
+    // Add click tracking and open links
+    Object.keys(links).forEach(id => {
+      const btn = document.getElementById(id);
+      btn.addEventListener("click", () => {
+        fbq('track', 'Lead'); // Track Lead event
+        window.open(links[id], "_blank");
+      });
+    });
+  </script>
 
 </body>
 </html>
