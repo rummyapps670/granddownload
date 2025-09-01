@@ -19,7 +19,6 @@
       padding: 20px;
       font-size: 2rem;
       font-weight: 600;
-      animation: fadeDown 1.5s ease-in-out;
     }
 
     .games {
@@ -31,39 +30,28 @@
     }
 
     .game-card {
-      background: #2a2a40;
-      border-radius: 15px;
-      padding: 20px;
       width: 250px;
       text-align: center;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      cursor: pointer;
-      animation: fadeUp 1.2s ease-in-out;
-    }
-
-    .game-card:hover {
-      transform: translateY(-10px) scale(1.05);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
     }
 
     .game-card img {
       width: 100%;
       border-radius: 10px;
       margin-bottom: 15px;
+      display: block;
     }
 
+    /* Make buttons standard <a> elements for automatic detection */
     .play-btn {
       display: inline-block;
-      padding: 10px 20px;
+      padding: 12px 25px;
       background: #ff4d6d;
       color: #fff;
       font-weight: 600;
       border-radius: 8px;
-      border: none;
-      cursor: pointer;
-      transition: background 0.3s ease;
+      text-decoration: none;
       font-family: 'Poppins', sans-serif;
+      transition: background 0.3s ease;
     }
 
     .play-btn:hover {
@@ -75,29 +63,9 @@
       font-size: 0.9rem;
       opacity: 0.7;
     }
-
-    /* Animations */
-    @keyframes fadeDown {
-      from { opacity: 0; transform: translateY(-30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
   </style>
 
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5J011S3GJG"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-5J011S3GJG');
-  </script>
-
-  <!-- Meta Pixel -->
+  <!-- Meta Pixel Code -->
   <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -115,40 +83,37 @@
     src="https://www.facebook.com/tr?id=4173609939545731&ev=PageView&noscript=1"/>
   </noscript>
 
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-W7RL6VRL');</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5J011S3GJG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5J011S3GJG');
+</script>
 
 </head>
 <body>
-
-  <!-- GTM (noscript) -->
-  <noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W7RL6VRL"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe>
-  </noscript>
 
   <header>Welcome to Rummy World</header>
 
   <section class="games">
     <div class="game-card">
       <img src="rummymost.png" alt="Rummy Most">
-      <button id="playRummyMost" class="play-btn">Play Rummy Most</button>
+      <a href="https://rummygrand.cc?from_gameid=12746176&channelCode=100000" class="play-btn" target="_blank" id="rummyMostBtn">Play Rummy Most</a>
     </div>
     <div class="game-card">
       <img src="rummygrand.png" alt="Rummy Grand">
-      <button id="playRummyGrand" class="play-btn">Play Rummy Grand</button>
+      <a href="https://rummygrand.cc/?from_gameid=9118107&channelCode=9099722" class="play-btn" target="_blank" id="rummyGrandBtn">Play Rummy Grand</a>
     </div>
     <div class="game-card">
       <img src="rummyloot.png" alt="Rummy Loot">
-      <button id="playRummyLoot" class="play-btn">Play Rummy Loot</button>
+      <a href="https://rummyloot.com/?from_gameid=10190031&channelCode=100000" class="play-btn" target="_blank" id="rummyLootBtn">Play Rummy Loot</a>
     </div>
     <div class="game-card">
       <img src="rummysweety.png" alt="Rummy Paisa">
-      <button id="playRummyPaisa" class="play-btn">Play Rummy Paisa</button>
+      <a href="https://rummyloot.in/?from_gameid=4160821&channelCode=878378" class="play-btn" target="_blank" id="rummyPaisaBtn">Play Rummy Paisa</a>
     </div>
   </section>
 
@@ -156,21 +121,13 @@
     © 2025 Rummy World. All Rights Reserved.
   </footer>
 
+  <!-- Optional: manual tracking if needed -->
   <script>
-    // Map buttons to their URLs
-    const links = {
-      playRummyMost: "https://rummygrand.cc?from_gameid=12746176&channelCode=100000",
-      playRummyGrand: "https://rummygrand.cc/?from_gameid=9118107&channelCode=9099722",
-      playRummyLoot: "https://rummyloot.com/?from_gameid=10190031&channelCode=100000",
-      playRummyPaisa: "https://rummyloot.in/?from_gameid=4160821&channelCode=878378"
-    };
-
-    // Add click tracking and open links
-    Object.keys(links).forEach(id => {
+    const btnIds = ['rummyMostBtn','rummyGrandBtn','rummyLootBtn','rummyPaisaBtn'];
+    btnIds.forEach(id => {
       const btn = document.getElementById(id);
-      btn.addEventListener("click", () => {
-        fbq('track', 'Lead'); // Track Lead event
-        window.open(links[id], "_blank");
+      btn.addEventListener('click', () => {
+        fbq('track','Lead');
       });
     });
   </script>
